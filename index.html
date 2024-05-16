@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <title>GooRap Case Execution Service in Ethiopia</title>
+
+	<meta name="description" content="GooRap Case Execution is a service that manages clients' operations for carrying out various cases in their daily lives and in their businesses. Clients that use our services will give us a mandate to handle it, and we will carry out all the necessary steps and deliver a satisfying outcome.">
+	<meta name="keywords" content="Case in Ethiopia, Case handling, case manager, Case Execution, Business lisence in ethiopia, property management in ethiopia"> -->
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/bodyStyling.css">
+</head>
+<body>
+<!--All body starts here-->
+<div>
+	<div class="column_left columns">
+	<!--header strats here-->
+			<div class="header">
+				<img id="logo" src="./images/logo.png">
+			</div>
+			<div id="lang">
+				<label>Language</label>
+				<select name="Lang" title="Select language">
+					<option value="en-us">English</option>
+					<option>Amharic</option>
+					<option>Somali</option>
+					<option>Afan Oromo</option>
+					<option>Tigrigna</option>
+				</select>
+			</div>
+			<div id="backRefresh">
+				<a href="index.html"><button id="backDisp">Back</button></a>
+				<a href="index.html"><button id="refresh">Refresh</button></a>
+			</div>
+	<!--header ends here-->
+		<!--order tracking element starts here-->
+			<div class="tracking">
+				<label id="trk_label">Enter your order ID to track your case status</label>
+				<form id="trk_form" action="status.php" method="get">
+					<input id="trk_input" type="text" name="track" required placeholder="Order ID" title="Enter order ID">
+					<button id="trk_btn" type="submit" name="go">GO</button>
+				</form>
+			</div>
+	<!--order tracking element ends here-->
+
+			<div class="order">
+				<div id="ord_label">Setup case</div>
+				<div id="ord_inputs">
+
+	<!--order placing element starts here-->
+					<form class="ord_form" action="order.php" method="get">
+						<div class="p_input_label" >Personal information</div>
+						<br>
+						<div class="p_info" >
+							<div class="input_element">
+								<label class="p_label" >Your Name *</label><br><input class="p_input required_input" type="text" name="your_name" required>
+								<p class="requiredAlert">Your name must be filled</p>
+							</div>
+							<div class="input_element">
+								<label class="p_label">Father Name *</label><br><input class="p_input required_input" type="text" name="father_name" required>
+								<p class="requiredAlert" >Father name must be filled</p>
+							</div>
+							<div class="input_element">
+								<label class="p_label">Grand Father Name *</label><br><input class="p_input required_input" type="text" name="		grand_father_name" required>
+								<p class="requiredAlert" >Grand father name must be filled</p>
+							</div>
+							<div class="input_element">
+								<label class="p_label">Passport, Driving license or Residential ID *</label><br><input class="p_input required_input" type="file" name="file" required>
+								<p class="requiredAlert">Upload your passport, Driving licence or Residential ID</p>
+							</div>
+							<div class="input_element">
+								<label class="p_label">Email *</label><br><input class="p_input required_input" type="email" name="email" required>
+								<p class="requiredAlert" >Email must be filled</p>
+							</div>
+							<div class="input_element">
+								<label class="p_label">Phone number *</label><br><input class="p_input required_input" type="tel" name="phone_number" required>
+								<p class="requiredAlert" >Phone number must be filled</p>
+							</div>
+						</div>
+						<br>
+						<div class="p_input_label" >Residence address</div>
+						<br>
+						<div class="p_info" >
+							<div class="input_element">
+								<label class="p_label" >Country *</label><br><input class="p_input required_input" type="text" name="country" required>
+								<p class="requiredAlert" >Country must be filled</p>
+							</div>
+							<div class="input_element">
+								<label class="p_label">State *</label><br><input class="p_input required_input" type="text" name="state" required>
+								<p class="requiredAlert" >State must be filled</p>
+							</div>
+							<div class="input_element">
+								<label class="p_label">City *</label><br><input class="p_input required_input" type="text" name="city" required>
+								<p class="requiredAlert" >City must be filled</p>
+							</div>
+							<div class="input_element">
+								<label class="p_label">Street address 1 *</label><br><input class="p_input required_input" type="text" name="street_address_1" required>
+								<p class="requiredAlert" >Street address must be filled</p>
+							</div>
+							<div class="input_element">
+								<label class="p_label">Street address 2 (Optional)</label><br><input class="p_input" type="text" name="		street_address_2">
+							</div>
+							<div class="input_element">
+								<label class="p_label">Postal Code *</label><br><input class="p_input required_input" type="text" name="postal_code" required>
+								<p class="requiredAlert" >Postal code must be filled</p>
+							</div>
+						</div>
+						<br>
+						<div class="p_input_label" >Power of attorney details</div>
+						<br>
+						<div class="p_info" >
+							<div class="input_element">
+								<label class="p_label" >Case Type *</label>
+								<p class="requiredAlert" >Select your case type</p><br>
+								<select name="case" class="p_input  required_input" required title="select case type">
+									<option></option>
+									<option value="sale_rent">Property sale and rent</option>
+									<option value="pay-fee">Pay institutional fee</option>
+									<option value="other_case">Other case</option>
+								</select>
+							</div>
+							<div class="input_element">
+								<label class="p_label" >Issued by *</label>
+								<p class="requiredAlert" >Issuer name must be selected</p><br>
+								<select name="issuer" class="p_input required_input" required title="select input">
+									<option></option>
+									<option value="digital_mofa">Digital MoFA Ethiopia</option>
+									<option value="inperson">In person</option>
+									<option value="other">Other</option>
+								</select>
+							</div>
+							<div class="input_element">
+								<label class="p_label">Issue order id *</label><br><input class="p_input required_input" type="text" name="issue_order_id" required>
+								<p class="requiredAlert" >You must be fill issue order ID</p>
+							</div>
+							<div class="input_element">
+								<label class="p_label">Date of issue *</label><br><input class="p_input required_input" type="date" name="date_of_issue" required title="Select date">
+								<p class="requiredAlert" >Date must be chosen</p>
+							</div>
+							<div class="input_element">
+								<label class="p_label">Additional details (Optional)</label><br><input class="text_area p_input" type="textarea" name="		additional_details">
+							</div>
+						</div>
+						<br>
+						<div class="terms_input">
+							<p class="requiredAlert" >You must check both terms and privacy agreements</p>	
+							<input id="terms" class="required_input" type="checkbox" name="terms" required>Agree with <a href="terms.html">terms and condtions</a> 
+							<br>
+							<input id="privacy" class="required_input" type="checkbox" name="privacy" required>Agree with <a href="privacy.html">privacy</a>
+						</div>
+						<br>
+							<button id="p_button" type="button" name="p_button" >Next</button>				
+					</form>
+				</div>
+
+				<div class="confirmation " >
+					<p id="confirm_Label"><strong>Input the payment confirmation code that was issued to you to complete</strong></p>
+					<div class="confirm_form" >
+						<input class="confirm_in" type="text" name="confirm_in">
+						<button class="confirm_btn" >Confirm</button>
+					</div>
+					<p>Do't get code?</p>
+				</div>
+	<!--order placing element ends here-->
+	<!-- Input accuracy checking display starts here-->
+				<div id="check_inputs"><p><strong>Check the inputs and click continue to proceed</strong><p>
+						<div class="p_input_label" >Personal information</div>
+						<br>
+						<div class="p_info" >
+							<div class="input_element">
+								<label class="p_label" >Your Name</label><br><p class="p_input"></p>							
+							</div>
+							<div class="input_element">
+								<label class="p_label">Father Name</label><br><p class="p_input"></p>
+							</div>
+							<div class="input_element">
+								<label class="p_label">Grand Father Name</label><br><p class="p_input"></p>
+							</div>
+							<div class="input_element">
+								<label class="p_label">Passport, Driving license or Residential ID</label><br><p class="p_input"></p>
+							</div>
+							<div class="input_element">
+								<label class="p_label">Email</label><br><p class="p_input"></p>
+							</div>
+							<div class="input_element">
+								<label class="p_label">Phone number</label><br><p class="p_input"></p>
+							</div>
+						</div>
+						<br>
+						<div class="p_input_label" >Residence address</div>
+						<br>
+						<div class="p_info" >
+							<div class="input_element">
+								<label class="p_label" >Country</label><br><p class="p_input"></p>
+							</div>
+							<div class="input_element">
+								<label class="p_label">State</label><br><p class="p_input"></p>
+							</div>
+							<div class="input_element">
+								<label class="p_label">City</label><br><p class="p_input"></p>
+							</div>
+							<div class="input_element">
+								<label class="p_label">Street address 1</label><br><p class="p_input"></p>
+							</div>
+							<div class="input_element">
+								<label class="p_label">Street address 2 (Optional)</label><br><p class="p_input"></p>
+							</div>
+							<div class="input_element">
+								<label class="p_label">Postal Code</label><br><p class="p_input"></p>
+							</div>
+						</div>
+						<br>
+						<div class="p_input_label" >Power of attorney details</div>
+						<br>
+						<div class="p_info" >
+							<div class="input_element">
+								<label class="p_label" >Case Type</label><br><p class="p_input"></p>
+							</div>
+							<div class="input_element">
+								<label class="p_label" >Issued by</label><br><p class="p_input"></p>
+							</div>
+							<div class="input_element">
+								<label class="p_label">Issue order id</label><br><p class="p_input"></p>
+							</div>
+							<div class="input_element">
+								<label class="p_label">Date of issue</label><br><p class="p_input"></p>
+							</div>
+							<div class="input_element">
+								<label class="p_label">Additional details (Optional)</label><br><p class="p_input"></p>
+							</div>
+							<div class="input_element">
+								<label class="p_label">Price</label><br><p class="p_input">ETB _ _ _</p>
+							</div>
+						</div>
+						<br>
+						<div id="check_input_btn">
+							<button id="p_button" class="check_back" type="button" name="p_button">Back</button>
+							<button id="p_button" class="check_continue" type="button" name="check_button" >Continue</button>
+						</div>	
+				</div>
+				<div class="confirmFinal" >
+					<div>
+					</div>
+				</div>
+			</div>
+	<!-- Input accuracy checking display starts here-->
+	<!--Rates element starts here-->
+		<div class="rate">
+				<div class="give_rate">
+					<div id="rate_button">Rate this service</div>
+					<div class="rate_questions">
+						<div>
+							<span>Use name</span>
+							<br>
+							<input name="userName" class="uName" placeholder="user name">
+						</div>
+							<br>
+						<div class="question1">
+							<p>How satisfied are you with the service?</p>
+							<i id="0" class="material-icons" onclick="giveRate(this, this.id)">star_rate</i>
+							<i id="1" class="material-icons" onclick="giveRate(this, this.id)">star_rate</i>
+							<i id="2" class="material-icons" onclick="giveRate(this, this.id)">star_rate</i>
+							<i id="3" class="material-icons" onclick="giveRate(this, this.id)">star_rate</i>
+							<i id="4" class="material-icons" onclick="giveRate(this, this.id)">star_rate</i>
+						</div>
+						<div class="question2">
+							<p>How well does our service meet your needs?</p>
+							<i id="0" class="material-icons" onclick="giveRate(this, this.id)">star_rate</i>
+							<i id="1" class="material-icons" onclick="giveRate(this, this.id)">star_rate</i>
+							<i id="2" class="material-icons" onclick="giveRate(this, this.id)">star_rate</i>
+							<i id="3" class="material-icons" onclick="giveRate(this, this.id)">star_rate</i>
+							<i id="4" class="material-icons" onclick="giveRate(this, this.id)">star_rate</i>
+						</div>
+						<div class="question3">
+							<p>How did this effort compare to your expectations?</p>
+							<i id="0" class="material-icons" onclick="giveRate(this, this.id)">star_rate</i>
+							<i id="1" class="material-icons" onclick="giveRate(this, this.id)">star_rate</i>
+							<i id="2" class="material-icons" onclick="giveRate(this, this.id)">star_rate</i>
+							<i id="3" class="material-icons" onclick="giveRate(this, this.id)">star_rate</i>
+							<i id="4" class="material-icons" onclick="giveRate(this, this.id)">star_rate</i>
+						</div>
+						<div class="question4">
+							<p>How responsive have we been to your questions or concerns about our service?</p>
+							<i id="0" class="material-icons" onclick="giveRate(this, this.id)">star_rate</i>
+							<i id="1" class="material-icons" onclick="giveRate(this, this.id)">star_rate</i>
+							<i id="2" class="material-icons" onclick="giveRate(this, this.id)">star_rate</i>
+							<i id="3" class="material-icons" onclick="giveRate(this, this.id)">star_rate</i>
+							<i id="4" class="material-icons" onclick="giveRate(this, this.id)">star_rate</i>
+						</div>
+						<div class="question5">
+							<label class="comment_label"> If you could change just one thing about our service, what would it be?</label><br>
+							<input class="text_area rateComment" type="textarea">
+						</div>
+						<div class="rateSubmitDiv">
+							<button class="rate_submit" type="button" name="rate_submit" onclick="submRate()">Submit</button>
+						</div>
+					</div>
+				</div>
+				<div class="display_rates">
+					<p><strong>Users rates</strong></p>
+				<!--Ratings will be displayed here-->
+				</div>
+			</div>
+	<!--Rates element ends here-->
+		<div class="footer">
+			<div id="terms_privacy">
+				<a id="terms" href="terms.html">Terms</a>
+				<span>|</span>
+				<a id="privacy" href="privacy.html">Privacy</a>
+			</div>
+			<div class="medias">
+				<a id="fb" href="#"><img id="fb_icon" src="./images/icons/facebook.png"></a>
+				<a id="insta" href="#"><img id="insta_icon" src="./images/icons/instagram.png"></a>
+				<a id="twit" href="#"><img id="twit_icon" src="./images/icons/twiter.png"></a>
+				<a id="tik" href="#"><img id="tik_icon" src="./images/icons/tiktok.png"></a>
+				<a id="link" href="#"><img id="link_icon" src="./images/icons/linkden.png"></a>
+			</div>
+		</div>
+	</div>
+	<div class="column_right columns">
+		<h2>GooRap CaseExecution Service</h2>
+		<button class="addCont" onclick="document.getElementsByClassName('addNew')[0].style.display='block'">Add content</button>
+		<button class="recoverCont addCont" onclick="recoverContent()">Recover Content</button>
+		<div class="addNew" style="display: none; text-align: justify;">
+			<h4 class="newTitle" contenteditable="True">Add Title</h4>
+			<p class="newCont" contenteditable="True">Add content here</p>
+			<span class="createCont">
+			    <button class="newContSave contBtn" onclick="addContent()">Save</button><br>
+			</span>
+		</div>
+	</div>
+	<div id="moveUp">
+		<a href="#">
+			<i class="material-icons" style="padding:5px;font-size:21px;color:#0070c3">navigation</i>
+		</a>
+	</div>
+<!--info elements starts here-->
+	<div class="info">
+		<div class="info_head">
+			<button class="home" style="display: none;"><a href="index.html" style="color: white; text-decoration-line: none;"><< Home</a></button>
+			<button class="about" onclick="info_more()"><a href="#" style="color: white; text-decoration-line: none;">More >></a></button>
+		</div>
+	</div>
+<!--info elements ends here-->
+</div>
+<!--All body ends here-->
+<!--JavaScript code starts here-->
+<script type="text/javascript" src="./js/gr_case_js.js"></script>
+</body>
+</html>

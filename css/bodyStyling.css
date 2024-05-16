@@ -1,0 +1,1005 @@
+		*{
+			box-sizing: border-box;
+			font-family: sans-serif;
+		}
+		.checked{
+			color: orange;
+		}
+
+		.rate_submit{
+			width: 25%;
+			height: 31px;
+			background-color: #1A9CFF;
+			border: 0 solid #1A9CFF;
+			border-radius: 3px;
+			margin-top: 12px;
+			color: white;
+			font-size: 1.05em;	
+		}
+		.text_area{
+			height: 100px;
+		}
+		.rateComment{
+			margin-top: 16px;
+			width: 81%;
+		}
+		#backRefresh{
+			display: none;
+			grid-template-columns: auto auto;
+			justify-content: space-between;
+			margin: -21px 21px 21px;
+		}
+		#backDisp{
+			background-color: #1A9CFF;
+			border: 1px solid #1A9CFF;
+			padding: 3px 21px;
+			border-radius: 5px;
+			color: white;
+		}
+		#refresh{
+			background-color: #1A9CFF;
+			border: 1px solid #1A9CFF;
+			padding: 3px 21px;
+			border-radius: 5px;
+			color: white;
+		}
+		#p_button{
+			width: 116px;
+			margin-left: 15px;
+    		padding: 5px;
+    		border: 1px solid #1A9CFF;
+			border-radius: 3px;
+			font-family: sans-serif;
+			font-size: 1.0em;
+    		background-color: #1A9CFF;
+    		color: white;
+		}
+		#check_input_btn{
+			display: grid;
+			grid-template-columns: auto auto;
+			justify-content: space-between;
+			margin-right: 15px;
+		}
+		.confirmation{
+			display: none;
+			width: 97%;
+    		height: 232px;
+    		margin: 80px 1.5%;
+    		border-radius: 5px;
+		   	padding: 51px 21px;
+ 		    box-shadow: 0px 0px 8px -3px #1A9CFF;
+  			color: #1A9CFF;
+    		font-family: sans-serif;
+    		font-size: 0.95em;		
+    	}
+		.confirm_form{
+			display: grid;
+			grid-template-columns: auto auto;
+			justify-content: center;
+			grid-gap:10px;
+		}
+		.confirm_in{
+			width: 100%;
+			padding: 7px;
+			border-radius: 3px;
+			background: white;
+			border: 1px solid #1A9CFF;
+			color: black;
+		}
+		.confirm_btn{
+			width: 69px;
+			padding: 7px;
+			border-radius: 3px;
+			background: #1A9CFF;
+			border: 1px solid #1A9CFF;
+			color: white;
+		}
+    	.confirmFinal{
+			display: none;
+			width: 97%;
+    		height: 232px;
+    		margin: 80px 1.5%;
+    		border-radius: 5px;
+		   	padding: 51px 21px;
+ 		    box-shadow: 0px 0px 8px -3px #1A9CFF;
+  			color: #1A9CFF;
+    		font-family: sans-serif;
+    		font-size: 0.95em;
+    	}
+    	.addCont{
+    		background-color: white;
+    		color: #1A9CFF;
+    		font-weight: bold;
+    		border-radius: 3px;
+    		margin-bottom: 7px;
+ 		    box-shadow: 0px 1px 2px 0px #1A9CFF;
+    		border: none;
+    	}
+    	.contBtn{
+    		margin-left: 65%;
+    		background-color: #1A9CFF;
+    		border: 1px solid #1A9CFF;
+    		color: white;
+    		display: none;
+    		border-radius: 3px;
+    		padding: 2px 12px;
+    		font-size: 1.25em;
+    	}
+    	.newContSave{
+    	    display: block;
+    	}
+    	#moveUp{
+    		display: none;
+    		position: fixed;
+   	 		bottom: 42px;
+    		left: 44%;
+    		z-index: 2;
+    		padding: 5px;
+    		background-color: white;
+    		border-radius: 50%;
+    		box-shadow: 0px 2px 3px 0px #1A9CFF;
+    		border: none;
+    	}
+    	.requiredAlert{
+    		display: none;
+    		color: red;
+    		margin-top: -5px;
+    		font-size: 0.75em;
+    		font-style: oblique;
+    	}
+
+/*for mobile*/
+	@media only screen and (max-width:679.9px){
+		body{
+			overflow-x: hidden;
+			background-color: white;
+		}
+
+		.column_right{
+			display: none;
+			background-image: url("/GooRap_CaseExecution/images/background.png");
+			background-repeat: repeat;
+    		background-position-y: bottom;
+
+		}
+		.column_right_body{
+			padding: 1px 29px;
+		}
+		.header{
+			background-color: #1A9CFF;
+			width: 105%;
+			height: 91px;
+			margin: -8px;
+		}
+		.header, .order, .tracking, .info, .rate{
+			margin-bottom: 41px;
+		}
+		#logo{
+			position: absolute;
+			max-height: 86px;
+			margin-left: 12.5%;
+			margin-right: auto;
+		}
+		#lang{
+			margin: 1px 1px 12px 0.5%;
+			padding: 3px;
+			border-width: 0;
+			font-family: sans-serif;
+			color: #1A9CFF;
+		}
+		#trk_label{
+			color: #1A9CFF;
+			font-family: sans-serif;
+		}
+		.tracking{
+			width: 97%;
+			justify-content: center;
+			box-shadow: 0px 0px 3px 0px #1A9CFF;
+			border-radius: 3px;
+			padding: 67px 21px;
+			margin: 28% 1.5%;
+		}
+		#trk_form{
+			margin-top: 10px;
+		}
+		#trk_input{
+			width: 72%;
+			height: 31px;
+			border: 1px solid #1A9CFF;
+			border-radius: 3px;
+			padding-left: 13px;
+		}
+		#trk_btn{
+			width: 25%;
+			height: 32px;
+			background-color: #1A9CFF;
+			border: 0px solid #1A9CFF;
+			border-radius: 3px;
+			color: white;
+			font-size: 1.05em;
+
+		}
+		.order{
+			width: 100%;
+			border-radius: 3px;
+			padding: 3px 14px 14px;
+		}
+		#ord_label{
+			width: 68%;
+			background-color: #1A9CFF;
+			color: white;
+			font-family: sans-serif;
+			border: 0px solid #1A9CFF;
+			border-radius: 3px;
+			padding: 5px;
+			margin: 15px 15.5%;
+			text-align: center;
+		}
+		#ord_inputs{
+			display: none;
+			border-top: 1px solid #1A9CFF;
+			font-family: sans-serif;
+			color: #1A9CFF;
+			margin: 12px auto auto auto;
+		}
+		#check_inputs{
+			display: none;
+			border-top: 1px solid #1A9CFF;
+			font-family: sans-serif;
+			color: #1A9CFF;
+			margin: 12px auto auto auto;	
+		}
+		.p_info{
+			margin-left: 12px;
+		}
+		.p_input{
+			width: 85%;
+			max-width: 310px;
+			margin: 1px 0px 8px 0px;
+			padding: 5px;
+			border: 0px solid #FFFFFF;
+			box-shadow: 0px 0px 1px 0px #1A9CFF;
+			color: #1A9CFF;
+		}
+		.p_label{
+			font-family: sans-serif;
+			font-size: 0.80em;
+		}
+		.p_input_label{
+			width: 100%;
+			padding: 5px;
+			color: #1A9CFF;
+			border: 0px solid #FFFFFF;
+			box-shadow: 0px -2px 0px 0px #1A9CFF;
+		}
+		.terms_input{
+			width: 100%;
+			padding: 5px;
+			font-size: 0.85em;
+			color: #1A9CFF;
+			border: 0px solid #FFFFFF;
+			box-shadow: 0px -2px 0px 0px #1A9CFF;
+		}
+		.info{
+			border-radius: 3px;
+			width: 100%;
+			height: auto;
+			padding: 7px;
+			margin-top: -40px;
+			text-align: justify;
+		}
+		.info_head{
+    		display: grid;
+    		grid-template-columns: auto auto auto auto;
+    		justify-content: center;
+    		background-color: #1A9CFF;
+    		position: fixed;
+    		bottom: 0px;
+    		width: 100%;
+    		margin-left: -15px;
+		}
+		.info_body{
+			display: none;
+    		font-family: sans-serif;
+    		font-size: 0.85em;
+    		padding-top: 0px;
+		}
+		.home:hover, .about:hover{
+			background-color: #0081e3;
+		}
+		.home, .about{
+    		display: inline-block;
+    		font-family: sans-serif;
+    		font-weight: bold;
+    		color: white;
+    		padding: 3px 51px 7px;
+    		margin: 6px 1px;
+    		border-radius: 3px;
+    		background-color: #1A9CFF;
+    		border: none;
+    		box-shadow: 0px 2px 0px 1px #146db1;
+		}
+		#terms_privacy{
+			display: grid;
+			grid-template-columns: auto auto auto;
+			justify-content: space-evenly;
+			width: 50%;
+			margin: 17px 27.5% 0px 27.5%;
+			font-family: sans-serif;
+			text-decoration: none;
+			color: #1A9CFF;
+		}
+		.rate{
+			border-radius: 3px;
+			width: 100%;
+			height: auto;
+			padding: 0px 14px 14px;
+			font-family: sans-serif;
+			text-align: justify;
+		}
+		.give_rate{
+			width: 100%;
+    		border: 0px solid #1A9CFF;
+    		margin: 0px 0px 8px 0px;
+    		padding: 3px;
+    		text-align: center;
+		}
+		#rate_button{
+    		width: 72%;
+    		border: 0px solid #1A9CFF;
+    		border-radius: 3px;
+    		margin: 17px 14.5% 3px;
+    		padding: 7px;
+    		background-color: #1A9CFF;
+    		color: white;
+    		text-align: center;
+		}
+		.rate_questions{
+			display: none;
+    		border-radius: 3px;
+    		width: 100%;
+    		height: auto;
+    		padding: 8px;
+    		font-family: sans-serif;
+    		text-align: justify;
+		}
+		.display_rates{
+    		border-top: 1px solid #1A9CFF;
+    		border-radius: 3px;
+    		width: 100%;
+    		height: auto;
+    		padding: 8px;
+    		font-family: sans-serif;
+    		font-size: 0.85em;
+    		text-align: justify;
+		}
+		.user{
+			margin-right: 51px;
+			font-family: monospace;
+			font-size: 1.0em;
+			font-weight: bold;
+			color: black;
+		}
+		.rate_date{
+
+			font-family: monospace;
+			font-size: 0.95em;
+			color: black;
+		}
+		.comment{
+			color: #292929;
+			font-family: sans-serif;
+			font-size: 0.85em;
+		}
+		#terms, #privacy{
+			padding: 3px;
+			font-size: 0.85em;
+		}
+		.medias{
+			display: grid;
+			grid-template-columns: auto auto auto auto auto;
+			grid-gap: 18px;
+			justify-content: center;
+			border-top: 1px solid #1A9CFF;
+			margin-top: 21px;
+    		height: 100px;
+		}
+		#fb_icon, #insta_icon, #tik_icon, #link_icon, #twit_icon{
+			width: 19px;
+			margin: 23px 0px;
+		}
+	}
+	/* for tablet*/
+		@media only screen and (min-width:680px){
+			body{
+			background-color: white;
+			}
+			.column_left{
+				display: block;
+				width: 72%;
+    			margin: -12px -7px;
+    			padding: 11px;
+    			float: left;
+			}
+			.column_right{
+				width: 28%;
+    			margin: -12px 0px;
+    			padding: 11px;
+				float: right;
+				font-family: system-ui;
+				font-size: 0.85em;
+				background-color: white;
+    			overflow-y: scroll;
+			    background-image: url("/GooRap_CaseExecution/images/background.png");
+			    background-repeat: repeat;
+    		    background-position-y: bottom;
+
+			}
+			#column_right_body{
+				text-align: justify;
+
+			}
+			.columns{
+    			height: 625px;
+    			overflow-y: scroll;
+    			overflow-x: hidden;
+    			box-shadow: 0px 1px 0px 0px #1A9CFF;
+    		}
+			.column_right_btn{
+				color: #1A9CFF;
+			}
+		.header{
+			background-color: #1A9CFF;
+			width: 105%;
+			height: 101px;
+			margin: -8px;
+		}
+		.header, .order, .tracking, .info, .rate{
+			margin-bottom: 51px;
+		}
+		#logo{
+			max-height: 96px;
+			margin-left: 2.5%;
+			margin-right: auto;
+		}
+		#lang{
+			margin: -110px 1px 12px 12.5%;
+			padding: 3px;
+			border-width: 0;
+			font-family: sans-serif;
+			float: right;
+			color: white;
+		}
+		#trk_label{
+			color: #1A9CFF;
+			font-family: sans-serif;
+		}
+		.tracking{
+			width: 90%;
+			box-shadow: 0px 0px 3px 0px #1A9CFF;
+			border-radius: 3px;
+			padding: 67px 21px;
+			margin:12% auto 12% 5%;
+		}
+		#trk_form{
+			margin-top: 10px;
+		}
+		#trk_input{
+			width: 72%;
+			height: 33px;
+			border: 1px solid #1A9CFF;
+			border-radius: 3px;
+			padding-left: 13px;
+		}
+		#trk_btn{
+			width: 25%;
+			height: 34px;
+			background-color: #1A9CFF;
+			border: 0px solid #1A9CFF;
+			border-radius: 3px;
+			color: white;
+			font-size: 1.05em;
+
+		}
+		.order{
+			width: 100%;
+			border-radius: 3px;
+			padding: 3px 14px 14px;
+		}
+		#ord_label{
+			width: 53%;
+			background-color: #1A9CFF;
+			color: white;
+			font-family: sans-serif;
+			border: 0px solid #1A9CFF;
+			border-radius: 3px;
+			padding: 5px;
+			margin: 21px 23.5%;
+			text-align: center;
+		}
+		#ord_inputs{
+			display:block;
+			border-top: 1px solid #1A9CFF;
+			font-family: sans-serif;
+			color: #1A9CFF;
+			margin: 12px auto auto auto;
+		}
+		#check_inputs{
+			display:none;
+			border-top: 1px solid #1A9CFF;
+			font-family: sans-serif;
+			color: #1A9CFF;
+			margin: 12px auto auto auto;	
+		}
+		.p_info{
+			margin-left: 12px;
+		}
+		.p_input{
+			width: 62%;
+			max-width: 310px;
+			margin: 1px 0px 8px 0px;
+			padding: 5px;
+			border: 0px solid #FFFFFF;
+			box-shadow: 0px 0px 1px 0px #1A9CFF;
+			color: #1A9CFF;
+		}
+		.p_label{
+			font-family: sans-serif;
+			font-size: 0.80em;
+		}
+		.p_input_label{
+			width: 100%;
+			padding: 5px;
+			color: #1A9CFF;
+			border: 0px solid #FFFFFF;
+			box-shadow: 0px -2px 0px 0px #1A9CFF;
+		}
+		.terms_input{
+			width: 100%;
+			padding: 5px;
+			font-size: 0.85em;
+			color: #1A9CFF;
+			border: 0px solid #FFFFFF;
+			box-shadow: 0px -2px 0px 0px #1A9CFF;
+		}
+		.info{
+			display: none;
+			border-radius: 3px;
+			width: 100%;
+			height: auto;
+			padding: 7px;
+			text-align: justify;
+		}
+		#terms_privacy{
+			display: grid;
+			grid-template-columns: auto auto auto;
+			justify-content: center;
+			width: 50%;
+			margin: 17px 27.5% 0px 27.5%;
+			font-family: sans-serif;
+			text-decoration: none;
+			color: #1A9CFF;
+		}
+		.rate{
+			border-radius: 3px;
+			width: 100%;
+			height: auto;
+			padding: 0 14px 14px;
+			font-family: sans-serif;
+			text-align: justify;
+		}
+		.give_rate{
+			width: 100%;
+    		border: 0px solid #1A9CFF;
+    		margin: 0px 0px 8px 0px;
+    		padding: 3px;
+    		text-align: center;
+		}
+		#rate_button{
+    		width: 47%;
+    		border: 0px solid #1A9CFF;
+    		border-radius: 3px;
+    		margin: 21px 21.5% 3px;
+    		padding: 7px;
+    		background-color: #1A9CFF;
+    		color: white;
+    		text-align: center;
+		}
+		.rate_questions{
+			display: none;
+    		border-radius: 3px;
+    		width: 100%;
+    		height: auto;
+    		padding: 8px;
+    		font-family: sans-serif;
+    		text-align: justify;
+		}
+		.display_rates{
+    		border-top: 1px solid #1A9CFF;
+    		border-radius: 3px;
+    		width: 100%;
+    		height: auto;
+    		padding: 8px;
+    		font-family: sans-serif;
+    		font-size: 0.85em;
+    		text-align: justify;
+		}
+		.user{
+			margin-right: 51px;
+			font-family: monospace;
+			font-size: 1.0em;
+			font-weight: bold;
+			color: black;
+		}
+		.rate_date{
+
+			font-family: monospace;
+			font-size: 0.95em;
+			color: black;
+		}
+		.comment{
+			color: #292929;
+			font-family: sans-serif;
+			font-size: 0.85em;
+		}
+		#terms, #privacy{
+			padding: 3px;
+			font-size: 0.85em;
+		}
+		.medias{
+			display: grid;
+			grid-template-columns: auto auto auto auto auto;
+			grid-gap: 18px;
+			justify-content: center;
+			border-top: 1px solid #1A9CFF;
+			margin-top: 21px;
+		}
+		#fb_icon, #insta_icon, #tik_icon, #link_icon, #twit_icon{
+			width: 19px;
+			margin: 23px 0px;
+		}
+	/* for Desktop*/
+		@media only screen and (min-width:780px){
+			body{
+			background-color: white;
+			}
+			.column_left{
+				display: block;
+				width: 62%;
+    			margin: -12px -11px;
+    			padding: 11px;
+    			float: left;
+			}
+			.column_right{
+				width: 38%;
+    			margin: -12px 0px;
+    			padding: 11px;
+				float: right;
+				font-family: system-ui;
+				font-size: 0.85em;
+				background-color: white;
+			    background-image: url("/GooRap_CaseExecution/images/background.png");
+			    background-repeat: repeat;
+    		    background-position-y: bottom;
+
+			}
+			#column_right_body{
+				text-align: justify;
+			}
+			.columns{
+    			height: 651px;
+    			overflow-y: scroll;
+    			overflow-x: hidden;
+    			box-shadow: 0px 1px 0px 0px #1A9CFF;
+    		}
+			.column_right_btn{
+				color: #1A9CFF;
+			}
+		.header{
+			background-color: #1A9CFF;
+			width: 105%;
+			height: 101px;
+			margin: -8px;
+		}
+		.header, .order, .tracking, .info, .rate{
+			margin-bottom: 51px;
+		}
+		#logo{
+			max-height: 96px;
+			margin-left: 2.5%;
+			margin-right: auto;
+		}
+		#lang{
+			margin: -110px 1px 12px 12.5%;
+			padding: 3px;
+			border-width: 0;
+			font-family: sans-serif;
+			float: right;
+			color: white;
+		}
+		#trk_label{
+			color: #1A9CFF;
+			font-family: sans-serif;
+		}
+		.tracking{
+			width: 79%;
+			box-shadow: 0px 0px 3px 0px #1A9CFF;
+			border-radius: 3px;
+			padding: 67px 21px;
+			margin:12% auto 12% 5%;
+		}
+		#trk_form{
+			margin-top: 10px;
+		}
+		#trk_input{
+			width: 72%;
+			height: 33px;
+			border: 1px solid #1A9CFF;
+			border-radius: 3px;
+			padding-left: 13px;
+		}
+		#trk_btn{
+			width: 25%;
+			height: 34px;
+			background-color: #1A9CFF;
+			border: 0px solid #1A9CFF;
+			border-radius: 3px;
+			color: white;
+			font-size: 1.05em;
+
+		}
+		.order{
+			width: 100%;
+			border-radius: 3px;
+			padding: 3px 14px 14px;
+		}
+		#ord_label{
+			width: 53%;
+			background-color: #1A9CFF;
+			color: white;
+			font-family: sans-serif;
+			border: 0px solid #1A9CFF;
+			border-radius: 3px;
+			padding: 5px;
+			margin: 21px 23.5%;
+			text-align: center;
+		}
+		#ord_inputs{
+			display:block;
+			border-top: 1px solid #1A9CFF;
+			font-family: sans-serif;
+			color: #1A9CFF;
+			margin: 12px auto auto auto;
+		}
+		#check_inputs{
+			display:none;
+			border-top: 1px solid #1A9CFF;
+			font-family: sans-serif;
+			color: #1A9CFF;
+			margin: 12px auto auto auto;	
+		}
+		.p_info{
+			margin-left: 12px;
+		}
+		.p_input{
+			width: 62%;
+			max-width: 310px;
+			margin: 1px 0px 8px 0px;
+			padding: 5px;
+			border: 0px solid #FFFFFF;
+			box-shadow: 0px 0px 1px 0px #1A9CFF;
+			color: #1A9CFF;
+		}
+		.p_label{
+			font-family: sans-serif;
+			font-size: 0.80em;
+		}
+		.p_input_label{
+			width: 100%;
+			padding: 5px;
+			color: #1A9CFF;
+			border: 0px solid #FFFFFF;
+			box-shadow: 0px -2px 0px 0px #1A9CFF;
+		}
+		.terms_input{
+			width: 100%;
+			padding: 5px;
+			font-size: 0.85em;
+			color: #1A9CFF;
+			border: 0px solid #FFFFFF;
+			box-shadow: 0px -2px 0px 0px #1A9CFF;
+		}
+		.confirmation{
+			display: none;
+			width: 80%;
+    		height: 232px;
+    		margin: 10%;
+    		border-radius: 5px;
+		   	padding: 51px 21px;
+ 		    box-shadow: 0px 0px 8px -3px #1A9CFF;
+  			color: #1A9CFF;
+    		font-family: sans-serif;
+    		font-size: 0.95em;		
+    	}
+		.info{
+			display: none;
+			border-radius: 3px;
+			width: 100%;
+			height: auto;
+			padding: 7px;
+			text-align: justify;
+		}
+		#terms_privacy{
+			display: grid;
+			grid-template-columns: auto auto auto;
+			justify-content: center;
+			width: 50%;
+			margin: 17px 27.5% 0px 27.5%;
+			font-family: sans-serif;
+			text-decoration: none;
+			color: #1A9CFF;
+		}
+		.rate{
+			border-radius: 3px;
+			width: 100%;
+			height: auto;
+			padding: 0px 14px 14px;
+			font-family: sans-serif;
+			text-align: justify;
+		}
+		.give_rate{
+			width: 100%;
+    		border: 0px solid #1A9CFF;
+    		margin: 0px 0px 8px 0px;
+    		padding: 3px;
+    		text-align: center;
+		}
+		#rate_button{
+    		width: 47%;
+    		border: 0px solid #1A9CFF;
+    		border-radius: 3px;
+    		margin: 21px 27.5% 3px;
+    		padding: 7px;
+    		background-color: #1A9CFF;
+    		color: white;
+    		text-align: center;
+		}
+		.rate_questions{
+			display: none;
+    		border-radius: 3px;
+    		width: 100%;
+    		height: auto;
+    		padding: 8px;
+    		font-family: sans-serif;
+    		text-align: justify;
+		}
+		.display_rates{
+    		border-top: 1px solid #1A9CFF;
+    		border-radius: 3px;
+    		width: 100%;
+    		height: auto;
+    		padding: 8px;
+    		font-family: sans-serif;
+    		font-size: 0.85em;
+    		text-align: justify;
+		}
+		.user{
+			margin-right: 51px;
+			font-family: monospace;
+			font-size: 1.0em;
+			font-weight: bold;
+			color: black;
+		}
+		.rate_date{
+
+			font-family: monospace;
+			font-size: 0.95em;
+			color: black;
+		}
+		.comment{
+			color: #292929;
+			font-family: sans-serif;
+			font-size: 0.85em;
+		}
+		#terms, #privacy{
+			padding: 3px;
+			font-size: 0.85em;
+		}
+		.medias{
+			display: grid;
+			grid-template-columns: auto auto auto auto auto;
+			grid-gap: 18px;
+			justify-content: center;
+			border-top: 1px solid #1A9CFF;
+			margin-top: 21px;
+		}
+		#fb_icon, #insta_icon, #tik_icon, #link_icon, #twit_icon{
+			width: 19px;
+			margin: 23px 0px;
+		}
+	}
+	/* for extra large screen*/
+		@media only screen and (min-width:920px){
+			
+		.tracking{
+			width: 80%;
+			box-shadow: 0px 0px 3px 0px #1A9CFF;
+			border-radius: 3px;
+			padding: 85px 21px;
+			margin:12% auto 12% 5%;
+		}
+		.order{
+			width: 100%;
+			border-radius: 3px;
+			padding: 3px 14px 14px;
+		}
+		.input_element{
+			display: inline-block;
+			margin: 7px 3px 0px 21px;
+		}
+		#ord_label{
+			width: 37%;
+			background-color: #1A9CFF;
+			color: white;
+			font-family: sans-serif;
+			border: 0px solid #1A9CFF;
+			border-radius: 3px;
+			padding: 7px;
+			margin: 21px 27.5%;
+			text-align: center;
+		}
+		#ord_inputs{
+			display:block;
+			border-top: 1px solid #1A9CFF;
+			font-family: sans-serif;
+			color: #1A9CFF;
+			margin: 12px auto auto auto;
+		}
+		#check_inputs{
+			display:none;
+			border-top: 1px solid #1A9CFF;
+			font-family: sans-serif;
+			color: #1A9CFF;
+			margin: 12px auto auto auto;	
+		}
+		.confirmation{
+			display: none;
+			width: 80%;
+    		height: 232px;
+    		margin: 10%;
+    		border-radius: 5px;
+		   	padding: 51px 31px;
+ 		    box-shadow: 0px 0px 8px -3px #1A9CFF;
+  			color: #1A9CFF;
+    		font-family: sans-serif;
+    		font-size: 0.95em;		
+    	}
+		.p_info{
+			margin-left: 12px;
+		}
+		.p_input{
+			width: 265px;
+			padding: 5px;
+			border: 0px solid #FFFFFF;
+			box-shadow: 0px 0px 1px 0px #1A9CFF;
+		}
+		.p_label{
+			font-family: sans-serif;
+			font-size: 0.80em;
+		}
+		.p_input_label{
+			width: 100%;
+			padding: 5px;
+			color: #1A9CFF;
+			border: 0px solid #FFFFFF;
+			box-shadow: 0px -2px 0px 0px #1A9CFF;
+		}
+		.terms_input{
+			width: 100%;
+			padding: 5px;
+			font-size: 0.85em;
+			color: #1A9CFF;
+			border: 0px solid #FFFFFF;
+			box-shadow: 0px -2px 0px 0px #1A9CFF;
+		}
+		}
